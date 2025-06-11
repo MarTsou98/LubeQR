@@ -38,27 +38,26 @@
 <body>
   <div class="card">
     <img src="Logo-lube.png" alt="Your Photo">
-    <h1>Thei Valasiadou</h1>
+    <h1>Sofia Voutsa</h1>
     <h2>Cucine LUBE</h2>
-    <p>Tel.   +30 2310 324882</p>
-    <p>thei@cucinelube-salonicco.gr</p>
+    <p>Tel. +30 2310 324882</p>
+    <p>sofia@cucinelube-salonicco.gr</p>
     <p>45 Adrianoupoleos str.  55133  Kalamaria</p>
     <p>Insta: @cucinelubesalonicco</p>
     <p>FB:   @cucinelubesalonicco</p>
     <p>www.cucinelube-salonicco.gr</p>
   </div>
 
-  <script>
+    <script>
    window.onload = function() {
   const vcardLines = [
     "BEGIN:VCARD",
     "VERSION:3.0",
-    "N:Tsourelas;Tilemachos;;;",
-    "FN:Tilemachos Tsourelas",
+    "N:Voutsa;Sofia;;;",
+    "FN:Sofia Voutsa",
     "ORG:Cucine Lube Salonicco",
-    "TITLE:Manager",
-    "EMAIL;TYPE=INTERNET:tilemachos@cucinelube-salonicco.gr",
-    "TEL;TYPE=CELL:+306945875654",
+    "TITLE:Sales",
+    "EMAIL;TYPE=INTERNET:sofia@cucinelube-salonicco.gr",
     "TEL;TYPE=WORK:+302310324882",
     "ADR;TYPE=WORK:;;45 Adrianoupoleos str.;Thessaloniki;;55133;Greece",
     "URL:https://www.cucinelube-salonicco.gr",
@@ -71,7 +70,7 @@
 
   const link = document.createElement("a");
   link.href = url;
-  link.download = "Tilemachos_Tsourelas.vcf";
+  link.download = "Sofia_Voutsa.vcf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
