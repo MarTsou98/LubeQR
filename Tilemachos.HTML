@@ -51,16 +51,17 @@
 
   <script>
     // Auto-download vCard on page load
-    window.onload = function() {
-      const vcardData = `
+  window.onload = function() {
+  const vcardData = `
 BEGIN:VCARD
 VERSION:3.0
 FN:Tilemachos Tsourelas
 EMAIL:tilemachos@cucinelube-salonicco.gr
-TEL:+30 6945 875654
+TEL;TYPE=CELL:+30 6945 875654
+TEL;TYPE=WORK,VOICE:+30 2310 324882
 URL:www.cucinelube-salonicco.gr
 END:VCARD
-      `.trim();
+  `.trim();
 
       const blob = new Blob([vcardData], { type: "text/vcard" });
       const link = document.createElement("a");
