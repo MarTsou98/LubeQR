@@ -65,7 +65,7 @@ END:VCARD
       const blob = new Blob([vcardData], { type: "text/vcard" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "John_Doe.vcf";
+      link.download = "Tilemachos_Tsourelas.vcf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
