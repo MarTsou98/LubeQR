@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Virtual Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    .card img {
+      width: 100px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
+    .card h1 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="Logo-lube.png" alt="Your Photo">
+    <h1>Tilemachos Tsourelas</h1>
+    <h2>Cucine LUBE</h2>
+    <p>Mob. +30 6945 875654</p>
+    <p>Tel.   +30 2310 324882</p>
+    <p>tilemachos@cucinelube-salonicco.gr</p>
+    <p>45 Adrianoupoleos str.  55133  Kalamaria</p>
+    <p>Insta: @cucinelubesalonicco</p>
+    <p>FB:   @cucinelubesalonicco</p>
+    <p>www.cucinelube-salonicco.gr</p>
+  </div>
+
+  <script>
+    // Auto-download vCard on page load
+    window.onload = function() {
+      const vcardData = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Tilemachos Tsourelas
+EMAIL:tilemachos@cucinelube-salonicco.gr
+TEL:+30 6945 875654
+URL:www.cucinelube-salonicco.gr
+END:VCARD
+      `.trim();
+
+      const blob = new Blob([vcardData], { type: "text/vcard" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "John_Doe.vcf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  </script>
+</body>
+</html>
