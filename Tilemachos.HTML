@@ -49,26 +49,24 @@
     <p>www.cucinelube-salonicco.gr</p>
   </div>
 
-  <script>
-    // Auto-download vCard on page load
-  window.onload = function() {
-  const vcardData = `
-BEGIN:VCARD
-VERSION:3.0
-FN:Tilemachos Tsourelas
-ORG:Cucine Lube Salonicco
-TITLE:Owner
-EMAIL:tilemachos@cucinelube-salonicco.gr
-TEL;TYPE=CELL,VOICE:+30 6945 875654
-TEL;TYPE=WORK,VOICE:+30 2310 123456
-ADR;TYPE=WORK:;;123 Leoforos Vasileos Georgiou;Thessaloniki;;54640;Greece
-LABEL;TYPE=WORK:123 Leoforos Vasileos Georgiou\\nThessaloniki 54640\\nGreece
-URL:www.cucinelube-salonicco.gr
-END:VCARD
+   <script>
+    window.onload = function () {
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:Tilemachos Tsourelas",
+        "N:Tsourelas;Tilemachos;;;",
+        "ORG:Cucine Lube Salonicco",
+        "TITLE:Owner",
+        "EMAIL;TYPE=INTERNET:tilemachos@cucinelube-salonicco.gr",
+        "TEL;TYPE=CELL:+30 6945 875654",
+        "TEL;TYPE=WORK:+30 2310 123456",
+        "ADR;TYPE=WORK:;;123 Leoforos Vasileos Georgiou;Thessaloniki;;54640;Greece",
+        "URL:https://www.cucinelube-salonicco.gr",
+        "END:VCARD"
+      ].join("\r\n");
 
-  `.trim();
-
-      const blob = new Blob([vcardData], { type: "text/vcard" });
+      const blob = new Blob([vcard], { type: "text/vcard" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
       link.download = "Tilemachos_Tsourelas.vcf";
